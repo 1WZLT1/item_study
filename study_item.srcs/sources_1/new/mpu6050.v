@@ -26,19 +26,68 @@ always @(posedge clk or negedge rest_n)begin
                 i2c_exec   <= 1'b1; 
                 i2c_addr   <= 8'h75;
                 i2c_data_w <= 8'h75;
-                state      <= 1'd1;
+                state      <= 4'd1;
             end
+            
             4'd1:begin
                 if(i2c_data_r == 8'h68)begin
-                i2c_rh_wl  <= 1'b0;
-                i2c_exec   <= 1'b1; 
-                i2c_addr   <= 8'h6B;
+                    i2c_exec   <= 1'd1;
+                    i2c_rh_wl  <= 1'b0;
+                    i2c_addr   <= 8'h6B;
+                    i2c_data_w <= 8'h01;
+                    state      <= 4'd2;
                 end
                 else begin
-                state      <= 1'd0; 
+                state      <= 4'd0; 
                 end 
             end
             
+            4'd2:begin
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b0;
+                 i2c_addr   <= 8'h6C;
+                 i2c_data_w <= 8'h00;
+                 state      <= 4'd3;
+            end 
+            
+            4'd3:begin
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b0;
+                 i2c_addr   <= 8'h1A;
+                 i2c_data_w <= 8'h06;
+                 state      <= 4'd4;
+            end
+            
+            4'd4:begin
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b0;
+                 i2c_addr   <= 8'h19;
+                 i2c_data_w <= 8'h09;
+                 state      <= 4'd5;
+            end
+            
+            4'd5:begin
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b0;
+                 i2c_addr   <= 8'h1C;
+                 i2c_data_w <= 8'h18;
+                 state      <= 4'd6;
+            end
+            
+            4'd6:begin
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b0;
+                 i2c_addr   <= 8'h1B;
+                 i2c_data_w <= 8'h18;
+                 state      <= 4'd7;
+            end
+            
+             4'd7:begin
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b1;
+                 i2c_addr   <= 8'h43;
+                 i2c_data_w <= 8'h43;
+             end 
         endcase 
     end
 end    

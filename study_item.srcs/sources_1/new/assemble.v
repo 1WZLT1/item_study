@@ -30,9 +30,9 @@ led_twinkle u_led_twinkle(
 );
 
 i2c_dri #(
-    .SLAVE_ADDR  (SLAVE_ADDR),  //EEPROM从机地址
-    .CLK_FREQ    (CLK_FREQ  ),  //模块输入的时钟频率
-    .I2C_FREQ    (I2C_FREQ  )   //IIC_SCL的时钟频率
+    .SLAVE_ADDR  (SLAVE_ADDR),  
+    .CLK_FREQ    (CLK_FREQ  ),  
+    .I2C_FREQ    (I2C_FREQ  )   
 ) u_i2c_dri(
     .clk         (clk    ),  
     .rst_n       (rest_n ),  

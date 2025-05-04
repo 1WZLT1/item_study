@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon May  5 01:13:05 2025
+| Date         : Mon May  5 03:02:38 2025
 | Host         : LAPTOP-PFVE9KOE running 64-bit major release  (build 9200)
 | Command      : report_drc -file assemble_drc_opted.rpt -pb assemble_drc_opted.pb -rpx assemble_drc_opted.rpx
 | Design       : assemble
@@ -24,21 +24,15 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
-+--------+----------+---------------------------------+------------+
-| Rule   | Severity | Description                     | Violations |
-+--------+----------+---------------------------------+------------+
-| RPBF-3 | Warning  | IO port buffering is incomplete | 1          |
-| ZPS7-1 | Warning  | PS7 block required              | 1          |
-+--------+----------+---------------------------------+------------+
+             Violations found: 1
++--------+----------+--------------------+------------+
+| Rule   | Severity | Description        | Violations |
++--------+----------+--------------------+------------+
+| ZPS7-1 | Warning  | PS7 block required | 1          |
++--------+----------+--------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-RPBF-3#1 Warning
-IO port buffering is incomplete  
-Device port iic_sda expects both input and output buffering but the buffers are incomplete.
-Related violations: <none>
-
 ZPS7-1#1 Warning
 PS7 block required  
 The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
