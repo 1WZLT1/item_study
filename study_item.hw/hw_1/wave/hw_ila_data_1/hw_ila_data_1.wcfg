@@ -9,28 +9,27 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="507460fs"></ZoomStartTime>
-      <ZoomEndTime time="516551fs"></ZoomEndTime>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1024001fs"></ZoomEndTime>
       <Cursor1Time time="512000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="142"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="led_OBUF" type="logic">
+   <wvobject fp_name="u_led_twinkle/led" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">led_OBUF</obj_property>
-      <obj_property name="ObjectShortName">led_OBUF</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">u_led_twinkle/led</obj_property>
+      <obj_property name="ObjectShortName">led</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="cnt" type="array">
+   <wvobject fp_name="u_led_twinkle/cnt" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">cnt[25:0]</obj_property>
+      <obj_property name="ElementShortName">u_led_twinkle/cnt[25:0]</obj_property>
       <obj_property name="ObjectShortName">cnt[25:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>

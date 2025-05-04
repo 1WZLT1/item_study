@@ -39,7 +39,9 @@ set rt::rc [catch {
     }
       rt::read_verilog {
       D:/vi/study_item/.Xil/Vivado-28464-LAPTOP-PFVE9KOE/realtime/ila_0_stub.v
+      D:/vi/study_item/study_item.srcs/sources_1/new/i2c_dri.v
       D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v
+      D:/vi/study_item/study_item.srcs/sources_1/new/mpu6050.v
       D:/vi/study_item/study_item.srcs/sources_1/new/assemble.v
     }
       rt::read_vhdl -lib xpm D:/sofeware/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd

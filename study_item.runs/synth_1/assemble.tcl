@@ -17,7 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
 set_param synth.incrementalSynthesisCache D:/vi/study_item/.Xil/Vivado-28464-LAPTOP-PFVE9KOE/incrSyn
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg400-2
@@ -34,7 +36,9 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/vi/study_item/study_item.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
+  D:/vi/study_item/study_item.srcs/sources_1/new/i2c_dri.v
   D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v
+  D:/vi/study_item/study_item.srcs/sources_1/new/mpu6050.v
   D:/vi/study_item/study_item.srcs/sources_1/new/assemble.v
 }
 read_ip -quiet D:/vi/study_item/study_item.srcs/sources_1/ip/ila_0/ila_0.xci

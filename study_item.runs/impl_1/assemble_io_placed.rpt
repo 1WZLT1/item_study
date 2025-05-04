@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Sun May  4 22:22:23 2025
+| Date                      : Mon May  5 01:13:13 2025
 | Host                      : LAPTOP-PFVE9KOE running 64-bit major release  (build 9200)
 | Command                   : report_io -file assemble_io_placed.rpt
 | Design                    : assemble
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|             3 |
+|             5 |
 +---------------+
 
 
@@ -132,7 +132,7 @@ Table of Contents
 | E15        |             |            | VCCO_MIO1_501           | VCCO        |             |         |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |
 | E16        |             |            | PS_MIO31_501            | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | E17        |             | High Range | IO_L3P_T0_DQS_AD1P_35   | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| E18        |             | High Range | IO_L5P_T0_AD9P_35       | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| E18        | iic_scl     | High Range | IO_L5P_T0_AD9P_35       | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | E19        |             | High Range | IO_L5N_T0_AD9N_35       | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | E20        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | F1         |             |            | PS_DDR_DM1_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -151,7 +151,7 @@ Table of Contents
 | F14        |             |            | PS_MIO21_501            | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | F15        |             |            | PS_MIO25_501            | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | F16        |             | High Range | IO_L6P_T0_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| F17        |             | High Range | IO_L6N_T0_VREF_35       | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| F17        | iic_sda     | High Range | IO_L6N_T0_VREF_35       | BIDIR       | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | F18        |             | High Range | VCCO_35                 | VCCO        |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | F19        |             | High Range | IO_L15P_T2_DQS_AD12P_35 | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | F20        |             | High Range | IO_L15N_T2_DQS_AD12N_35 | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

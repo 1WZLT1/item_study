@@ -5,3 +5,7 @@ set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ}
 set_property PACKAGE_PIN G14 [get_ports led]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J15 [get_ports rest_n]
+set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E18 [get_ports iic_scl]
+set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F17 [get_ports iic_sda]

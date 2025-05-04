@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sun May  4 22:23:01 2025
+| Date             : Mon May  5 01:13:51 2025
 | Host             : LAPTOP-PFVE9KOE running 64-bit major release  (build 9200)
 | Command          : report_power -file assemble_power_routed.rpt -pb assemble_power_summary_routed.pb -rpx assemble_power_routed.rpx
 | Design           : assemble
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     3602 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1059 |     53200 |            1.99 |
-|   Register               |    <0.001 |     1930 |    106400 |            1.81 |
+| Slice Logic              |    <0.001 |     3721 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1127 |     53200 |            2.12 |
+|   Register               |    <0.001 |     1963 |    106400 |            1.84 |
 |   LUT as Shift Register  |    <0.001 |       92 |     17400 |            0.53 |
 |   CARRY4                 |    <0.001 |       37 |     13300 |            0.28 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   F7/F8 Muxes            |    <0.001 |        4 |     53200 |           <0.01 |
-|   Others                 |     0.000 |      218 |       --- |             --- |
-| Signals                  |    <0.001 |     2687 |       --- |             --- |
+|   Others                 |     0.000 |      220 |       --- |             --- |
+| Signals                  |    <0.001 |     2780 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |       140 |            0.71 |
-| I/O                      |    <0.001 |        3 |       125 |            2.40 |
+| I/O                      |    <0.001 |        5 |       125 |            4.00 |
 | Static Power             |     0.106 |          |           |                 |
 | Total                    |     0.108 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+

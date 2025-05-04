@@ -4,3 +4,8 @@ set_property PACKAGE_PIN J15 [get_ports rest_n]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
 set_property IOSTANDARD LVCMOS33 [get_ports led]
 set_property IOSTANDARD LVCMOS33 [get_ports rest_n]
+
+set_property PACKAGE_PIN E18 [get_ports iic_scl]
+set_property PACKAGE_PIN F17 [get_ports iic_sda]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_scl]
+set_property IOSTANDARD LVCMOS33 [get_ports iic_sda]
