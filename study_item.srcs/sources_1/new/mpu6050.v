@@ -24,9 +24,11 @@ always @(posedge clk or negedge rest_n)begin
         case(state)
             4'd0:begin 
                 i2c_exec   <= 1'b1; 
+                i2c_rh_wl  <= 1'b1;
                 i2c_addr   <= 8'h75;
-                i2c_data_w <= 8'h75;
+                if(i2c_done == 1'b1) begin
                 state      <= 4'd1;
+                end
             end
             
             4'd1:begin
@@ -35,14 +37,17 @@ always @(posedge clk or negedge rest_n)begin
                     i2c_rh_wl  <= 1'b0;
                     i2c_addr   <= 8'h6B;
                     i2c_data_w <= 8'h01;
-                    state      <= 4'd2;
+                    
+                    if(i2c_done == 1'b1) begin
+                    state      <= 4'd0;
+                    end
                 end
                 else begin
-                state      <= 4'd0; 
+                state      <= 4'd2; 
                 end 
             end
             
-            4'd2:begin
+            /*4'd2:begin
                  i2c_exec   <= 1'd1;
                  i2c_rh_wl  <= 1'b0;
                  i2c_addr   <= 8'h6C;
@@ -87,7 +92,16 @@ always @(posedge clk or negedge rest_n)begin
                  i2c_rh_wl  <= 1'b1;
                  i2c_addr   <= 8'h43;
                  i2c_data_w <= 8'h43;
+                 state      <= 4'd8;
              end 
+             
+            4'd8:begin
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b1;
+                 i2c_addr   <= 8'h44;
+                 i2c_data_w <= 8'h44;
+                 state      <= 4'd7;
+             end*/
         endcase 
     end
 end    

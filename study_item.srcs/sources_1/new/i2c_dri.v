@@ -98,7 +98,7 @@ always @(*) begin
                 if(bit_ctrl)                    //判断是16位还是8位字地址
                    next_state = st_addr16;
                 else
-                   next_state = st_addr8 ;
+                   next_state = st_addr8 ;//8位地址
             end
             else
                 next_state = st_sladdr;
@@ -180,9 +180,9 @@ always @(posedge dri_clk or negedge rst_n) begin
                 i2c_done<= 1'b0;                     
                 cnt     <= 7'b0;               
                 if(i2c_exec) begin                   
-                    wr_flag   <= i2c_rh_wl ;         
-                    addr_t    <= i2c_addr  ;         
-                    data_wr_t <= i2c_data_w;  
+                    wr_flag   <= i2c_rh_wl ;/*读写位置*/         
+                    addr_t    <= i2c_addr  ;/*地址*/         
+                    data_wr_t <= i2c_data_w;/*写入数据*/  
                     i2c_ack <= 1'b0;                      
                 end                                  
             end                                      
@@ -220,7 +220,7 @@ always @(posedge dri_clk or negedge rst_n) begin
                     end                              
                     7'd37: scl     <= 1'b1;            
                     7'd38: begin                     //从机应答 
-                        st_done <= 1'b1;
+                        st_done <= 1'b1;            //表示传输完毕
                         if(sda_in == 1'b1)           //高电平表示未应答
                             i2c_ack <= 1'b1;         //拉高应答标志位     
                     end                                          

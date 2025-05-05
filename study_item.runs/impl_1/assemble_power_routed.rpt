@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon May  5 03:03:32 2025
+| Date             : Mon May  5 13:29:26 2025
 | Host             : LAPTOP-PFVE9KOE running 64-bit major release  (build 9200)
 | Command          : report_power -file assemble_power_routed.rpt -pb assemble_power_summary_routed.pb -rpx assemble_power_routed.rpx
 | Design           : assemble
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     3812 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1152 |     53200 |            2.17 |
-|   Register               |    <0.001 |     2009 |    106400 |            1.89 |
+| Slice Logic              |    <0.001 |     3778 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1148 |     53200 |            2.16 |
+|   Register               |    <0.001 |     1989 |    106400 |            1.87 |
 |   LUT as Shift Register  |    <0.001 |       92 |     17400 |            0.53 |
 |   CARRY4                 |    <0.001 |       37 |     13300 |            0.28 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   F7/F8 Muxes            |    <0.001 |        4 |     53200 |           <0.01 |
 |   Others                 |     0.000 |      220 |       --- |             --- |
-| Signals                  |    <0.001 |     2845 |       --- |             --- |
+| Signals                  |    <0.001 |     2828 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |       140 |            0.71 |
 | I/O                      |    <0.001 |        5 |       125 |            4.00 |
 | Static Power             |     0.106 |          |           |                 |

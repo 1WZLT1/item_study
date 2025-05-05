@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23916 
+INFO: Helper process launched with PID 29532 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 424.387 ; gain = 95.215
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 424.426 ; gain = 95.664
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'assemble' [D:/vi/study_item/study_item.srcs/sources_1/new/assemble.v:1]
 	Parameter SLAVE_ADDR bound to: 7'b1101000 
@@ -25,8 +25,8 @@ INFO: [Synth 8-6157] synthesizing module 'assemble' [D:/vi/study_item/study_item
 	Parameter I2C_FREQ bound to: 18'b111101000010010000 
 INFO: [Synth 8-6157] synthesizing module 'led_twinkle' [D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v:1]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v:31]
-INFO: [Synth 8-6157] synthesizing module 'ila_0' [D:/vi/study_item/study_item.runs/synth_1/.Xil/Vivado-10372-LAPTOP-PFVE9KOE/realtime/ila_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ila_0' (1#1) [D:/vi/study_item/study_item.runs/synth_1/.Xil/Vivado-10372-LAPTOP-PFVE9KOE/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [D:/vi/study_item/study_item.runs/synth_1/.Xil/Vivado-15944-LAPTOP-PFVE9KOE/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (1#1) [D:/vi/study_item/study_item.runs/synth_1/.Xil/Vivado-15944-LAPTOP-PFVE9KOE/realtime/ila_0_stub.v:6]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_ila_0'. This will prevent further optimization [D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v:31]
 WARNING: [Synth 8-5788] Register led_reg in module led_twinkle is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v:19]
 INFO: [Synth 8-6155] done synthesizing module 'led_twinkle' (2#1) [D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v:1]
@@ -49,9 +49,8 @@ INFO: [Synth 8-6157] synthesizing module 'mpu6050' [D:/vi/study_item/study_item.
 INFO: [Synth 8-155] case statement is not full and has no default [D:/vi/study_item/study_item.srcs/sources_1/new/mpu6050.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'mpu6050' (4#1) [D:/vi/study_item/study_item.srcs/sources_1/new/mpu6050.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'assemble' (5#1) [D:/vi/study_item/study_item.srcs/sources_1/new/assemble.v:1]
-WARNING: [Synth 8-3331] design mpu6050 has unconnected port i2c_done
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 479.180 ; gain = 150.008
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 480.082 ; gain = 151.320
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -64,10 +63,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 479.180 ; gain = 150.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 480.082 ; gain = 151.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 479.180 ; gain = 150.008
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 480.082 ; gain = 151.320
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -80,31 +79,31 @@ Parsing XDC File [D:/vi/study_item/study_item.srcs/constrs_1/new/led.xdc]
 Finished Parsing XDC File [D:/vi/study_item/study_item.srcs/constrs_1/new/led.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vi/study_item/study_item.srcs/constrs_1/new/led.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/assemble_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/assemble_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 838.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 838.074 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 838.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 838.074 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 838.641 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 838.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 838.074 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 838.074 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 838.641 ; gain = 509.469
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 838.074 ; gain = 509.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 838.641 ; gain = 509.469
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 838.074 ; gain = 509.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for u_led_twinkle/u_ila_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 838.641 ; gain = 509.469
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 838.074 ; gain = 509.312
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'cur_state_reg' in module 'i2c_dri'
 INFO: [Synth 8-5546] ROM "dri_clk" won't be mapped to RAM because it is too sparse
@@ -139,7 +138,6 @@ INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because addre
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mpu6050'
 INFO: [Synth 8-5546] ROM "i2c_exec" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -158,18 +156,13 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'cur_state_reg' in modul
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                 iSTATE5 |                              000 |                             0000
-                  iSTATE |                              001 |                             0001
-                 iSTATE6 |                              010 |                             0010
-                 iSTATE0 |                              011 |                             0011
-                 iSTATE1 |                              100 |                             0100
-                 iSTATE2 |                              101 |                             0101
-                 iSTATE3 |                              110 |                             0110
-                 iSTATE4 |                              111 |                             0111
+                 iSTATE1 |                              001 |                             0000
+                  iSTATE |                              010 |                             0001
+                 iSTATE0 |                              100 |                             0010
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mpu6050'
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'mpu6050'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 838.641 ; gain = 509.469
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 838.074 ; gain = 509.312
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -194,11 +187,9 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 11    
 +---Muxes : 
 	   2 Input     26 Bit        Muxes := 1     
-	   8 Input     16 Bit        Muxes := 1     
 	  22 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
 	   9 Input      8 Bit        Muxes := 2     
-	   8 Input      8 Bit        Muxes := 1     
 	  31 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 6     
 	  29 Input      7 Bit        Muxes := 1     
@@ -208,17 +199,16 @@ Detailed RTL Component Info :
 	   9 Input      7 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 3     
-	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 35    
+	   2 Input      1 Bit        Muxes := 36    
 	  31 Input      1 Bit        Muxes := 7     
 	  29 Input      1 Bit        Muxes := 7     
 	  33 Input      1 Bit        Muxes := 6     
 	  22 Input      1 Bit        Muxes := 6     
 	   6 Input      1 Bit        Muxes := 5     
 	   9 Input      1 Bit        Muxes := 13    
-	   8 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -275,12 +265,9 @@ Detailed RTL Component Info :
 	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   8 Input     16 Bit        Muxes := 1     
-	   8 Input      8 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 5     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -310,27 +297,48 @@ INFO: [Synth 8-5546] ROM "u_i2c_dri/i2c_data_r" won't be mapped to RAM because i
 INFO: [Synth 8-5546] ROM "u_i2c_dri/dri_clk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "u_i2c_dri/data_r" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "u_mpu6050/i2c_exec" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[8]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[9]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[10]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[11]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[12]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[13]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[14]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[8]' (FDCE) to 'u_mpu6050/i2c_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[9]' (FDCE) to 'u_mpu6050/i2c_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[10]' (FDCE) to 'u_mpu6050/i2c_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[11]' (FDCE) to 'u_mpu6050/i2c_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[12]' (FDCE) to 'u_mpu6050/i2c_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[13]' (FDCE) to 'u_mpu6050/i2c_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[14]' (FDCE) to 'u_mpu6050/i2c_addr_reg[15]'
 INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[15]' (FDCE) to 'u_mpu6050/i2c_addr_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[7]' (FDCE) to 'u_mpu6050/i2c_data_w_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[0]' (FDCE) to 'u_mpu6050/i2c_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[1]' (FDCE) to 'u_mpu6050/i2c_addr_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[2]' (FDCE) to 'u_mpu6050/i2c_addr_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_addr_reg[5]' (FDCE) to 'u_mpu6050/i2c_addr_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_mpu6050/i2c_addr_reg[7] )
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_data_w_reg[1]' (FDCE) to 'u_mpu6050/i2c_data_w_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_data_w_reg[2]' (FDCE) to 'u_mpu6050/i2c_data_w_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_data_w_reg[3]' (FDCE) to 'u_mpu6050/i2c_data_w_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_data_w_reg[4]' (FDCE) to 'u_mpu6050/i2c_data_w_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_data_w_reg[5]' (FDCE) to 'u_mpu6050/i2c_data_w_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_mpu6050/i2c_data_w_reg[6]' (FDCE) to 'u_mpu6050/i2c_data_w_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_mpu6050/i2c_data_w_reg[7] )
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[8]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[9]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[10]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[11]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[12]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[13]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[14]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[15]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
-INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[7]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[8]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[9]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[10]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[11]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[12]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[13]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[14]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[15]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[0]' (FDCE) to 'u_i2c_dri/addr_t_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[1]' (FDCE) to 'u_i2c_dri/addr_t_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[2]' (FDCE) to 'u_i2c_dri/addr_t_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[5]' (FDCE) to 'u_i2c_dri/addr_t_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/addr_t_reg[7]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/data_wr_t_reg[1]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/data_wr_t_reg[2]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/data_wr_t_reg[3]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/data_wr_t_reg[4]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/data_wr_t_reg[5]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_i2c_dri/data_wr_t_reg[6]' (FDCE) to 'u_i2c_dri/data_wr_t_reg[7]'
+WARNING: [Synth 8-3332] Sequential element (u_mpu6050/FSM_onehot_state_reg[2]) is unused and will be removed from module assemble.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 838.641 ; gain = 509.469
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 838.074 ; gain = 509.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -360,13 +368,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 838.641 ; gain = 509.469
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 838.074 ; gain = 509.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 838.641 ; gain = 509.469
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 838.074 ; gain = 509.312
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -378,7 +386,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -402,7 +410,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -415,7 +423,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -427,25 +435,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -466,14 +474,14 @@ Report Cell Usage:
 |2     |BUFG   |     2|
 |3     |CARRY4 |     7|
 |4     |LUT1   |     4|
-|5     |LUT2   |    39|
-|6     |LUT3   |    35|
-|7     |LUT4   |    12|
-|8     |LUT5   |    26|
-|9     |LUT6   |    53|
-|10    |FDCE   |   102|
+|5     |LUT2   |    38|
+|6     |LUT3   |    21|
+|7     |LUT4   |    11|
+|8     |LUT5   |    29|
+|9     |LUT6   |    52|
+|10    |FDCE   |    81|
 |11    |FDCP   |     1|
-|12    |FDPE   |     5|
+|12    |FDPE   |     6|
 |13    |LDC    |     1|
 |14    |IBUF   |     2|
 |15    |IOBUF  |     1|
@@ -484,23 +492,23 @@ Report Instance Areas:
 +------+----------------+------------+------+
 |      |Instance        |Module      |Cells |
 +------+----------------+------------+------+
-|1     |top             |            |   292|
+|1     |top             |            |   258|
 |2     |  u_led_twinkle |led_twinkle |    76|
-|3     |  u_i2c_dri     |i2c_dri     |   172|
-|4     |  u_mpu6050     |mpu6050     |    37|
+|3     |  u_i2c_dri     |i2c_dri     |   167|
+|4     |  u_mpu6050     |mpu6050     |     8|
 +------+----------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 852.082 ; gain = 522.910
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 853.098 ; gain = 524.336
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 852.082 ; gain = 163.449
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 852.082 ; gain = 522.910
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 853.098 ; gain = 166.344
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 853.098 ; gain = 524.336
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 852.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 853.109 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   FDCP => FDCP (FDCE, FDPE, LUT3, LDCE, VCC): 1 instances
@@ -508,14 +516,14 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-94 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+113 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 852.152 ; gain = 524.738
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 853.109 ; gain = 526.023
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 852.152 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 853.109 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/vi/study_item/study_item.runs/synth_1/assemble.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file assemble_utilization_synth.rpt -pb assemble_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May  5 03:01:42 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon May  5 13:27:54 2025...
