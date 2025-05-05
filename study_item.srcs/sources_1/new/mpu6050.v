@@ -8,7 +8,11 @@ module mpu6050(
     input          [7:0]   i2c_data_r, //I2C读出的数据
     input                   i2c_done,   //I2C一次操作完成
     
-    output  reg    [7:0]    Gyro_z_h
+    output  reg    [7:0]    Gyro_z_h,
+    output  reg    [7:0]    Gyro_z_l,
+    
+    output  reg    [7:0]    Gyro_y_h,
+    output  reg    [7:0]    Gyro_y_l
     );
     
 reg [3:0] state;
@@ -115,6 +119,7 @@ always @(posedge clk or negedge rest_n)begin
                  i2c_addr   <= 8'h44;
                  if(i2c_done == 1'b1) begin
                  state      <= 4'd9;
+                 Gyro_z_l   <= i2c_data_r;
                  end
              end
              
@@ -124,6 +129,7 @@ always @(posedge clk or negedge rest_n)begin
                  i2c_addr   <= 8'h45;
                  if(i2c_done == 1'b1) begin
                  state      <= 4'd10;
+                 Gyro_y_h   <= i2c_data_r;
                  end
              end
              
@@ -133,6 +139,7 @@ always @(posedge clk or negedge rest_n)begin
                  i2c_addr   <= 8'h46;
                  if(i2c_done == 1'b1) begin
                  state      <= 4'd7;
+                 Gyro_y_l   <= i2c_data_r;
                  end
              end
              

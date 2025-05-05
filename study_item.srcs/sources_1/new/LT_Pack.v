@@ -6,7 +6,11 @@ module LT_Pack(
     output reg       send_en,                   //发送使能信号
     output reg [7:0] send_data,                  //待发送数据
     
-    input [7:0]      Gyro_z_h
+    input [7:0]      Gyro_z_h,
+    input [7:0]      Gyro_z_l,
+    
+    input [7:0]      Gyro_y_h,
+    input [7:0]      Gyro_y_l
 );
 
 reg tx_ready;
@@ -74,7 +78,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
                 end  
             end
             
-            /*****************Gyro_x_h*******************/
+            /*****************Gyro_z_h*******************/
             8'd6:begin
                 tx_ready  <= 1'b1;                  //准备启动发送过程
                 send_en   <= 1'b0;
@@ -91,11 +95,11 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
                 end  
             end
             
-            /*****************Gyro_x_l*******************/
+            /*****************Gyro_z_l*******************/
             8'd8:begin
                 tx_ready  <= 1'b1;                  //准备启动发送过程
                 send_en   <= 1'b0;
-                send_data <= 8'h22;             //寄存串口接收的数据
+                send_data <= Gyro_z_l;             //寄存串口接收的数据
                 state      = state +  7'd1;
             end
             8'd9:begin
@@ -112,7 +116,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
             8'd10:begin
                 tx_ready  <= 1'b1;                  //准备启动发送过程
                 send_en   <= 1'b0;
-                send_data <= 8'h33;             //寄存串口接收的数据
+                send_data <= Gyro_y_h;             //寄存串口接收的数据
                 state      = state +  7'd1;
             end
             8'd11:begin
@@ -129,7 +133,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
             8'd12:begin
                 tx_ready  <= 1'b1;                  //准备启动发送过程
                 send_en   <= 1'b0;
-                send_data <= 8'h44;             //寄存串口接收的数据
+                send_data <= Gyro_y_l;             //寄存串口接收的数据
                 state      = state +  7'd1;
             end
             8'd13:begin

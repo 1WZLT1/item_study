@@ -30,7 +30,9 @@ wire [7:0] uart_send_data;              //UART发送数据
 wire       uart_tx_busy;                //UART发送忙状态标志
  
 wire [7:0] Gyro_z_h;//Gyro z 高位 
-wire [7:0] Gyro_z_l;//Gyro z 高位 
+wire [7:0] Gyro_z_l;//Gyro z 高位
+wire [7:0] Gyro_y_h;//Gyro y 高位 
+wire [7:0] Gyro_y_l;//Gyro y 高位  
     
 led_twinkle u_led_twinkle(
     .clk(clk),
@@ -72,7 +74,11 @@ mpu6050 u_mpu6050(
    .i2c_data_r (i2c_data_r), //I2C读出的数据
    .i2c_done   (i2c_done  ),//I2C一次操作完成
    
-    .Gyro_z_h  (Gyro_z_h)
+    .Gyro_z_h  (Gyro_z_h),
+    .Gyro_z_l  (Gyro_z_l),
+    
+    .Gyro_y_h  (Gyro_y_h),
+    .Gyro_y_l  (Gyro_y_l)
 );
 
 uart_send u_uart_send(
@@ -92,7 +98,12 @@ LT_Pack u_LT_Pack(
     .tx_busy      (uart_tx_busy) ,           //发送忙状态标志      
     .send_en      (uart_send_en) ,           //发送使能信号
     .send_data    (uart_send_data),          //待发送数据 
-    .Gyro_z_h     (Gyro_z_h)   
+    
+    .Gyro_z_h     (Gyro_z_h),   
+    .Gyro_z_l     (Gyro_z_l),
+    
+    .Gyro_y_h     (Gyro_y_h),
+    .Gyro_y_l     (Gyro_y_l)   
 );
 
   
