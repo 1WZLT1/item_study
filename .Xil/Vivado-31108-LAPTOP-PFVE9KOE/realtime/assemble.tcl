@@ -16,7 +16,7 @@ set rt::rc [catch {
     set rt::cmdEcho 0
     rt::set_parameter writeXmsg true
     rt::set_parameter enableParallelHelperSpawn true
-    set ::env(RT_TMP) "D:/vi/study_item/.Xil/Vivado-28464-LAPTOP-PFVE9KOE/realtime/tmp"
+    set ::env(RT_TMP) "D:/vi/study_item/.Xil/Vivado-31108-LAPTOP-PFVE9KOE/realtime/tmp"
     if { [ info exists ::env(RT_TMP) ] } {
       file delete -force $::env(RT_TMP)
       file mkdir $::env(RT_TMP)
@@ -38,10 +38,11 @@ set rt::rc [catch {
       D:/sofeware/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv
     }
       rt::read_verilog {
-      D:/vi/study_item/.Xil/Vivado-28464-LAPTOP-PFVE9KOE/realtime/ila_0_stub.v
+      D:/vi/study_item/.Xil/Vivado-31108-LAPTOP-PFVE9KOE/realtime/ila_0_stub.v
       D:/vi/study_item/study_item.srcs/sources_1/new/i2c_dri.v
       D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v
       D:/vi/study_item/study_item.srcs/sources_1/new/mpu6050.v
+      D:/vi/study_item/study_item.srcs/sources_1/new/uart_send.v
       D:/vi/study_item/study_item.srcs/sources_1/new/assemble.v
     }
       rt::read_vhdl -lib xpm D:/sofeware/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd
@@ -61,7 +62,7 @@ set rt::rc [catch {
     rt::set_parameter rstSrlDepthThreshold 4
 # MODE: 
     rt::set_parameter webTalkPath {}
-    rt::set_parameter enableSplitFlowPath "D:/vi/study_item/.Xil/Vivado-28464-LAPTOP-PFVE9KOE/"
+    rt::set_parameter enableSplitFlowPath "D:/vi/study_item/.Xil/Vivado-31108-LAPTOP-PFVE9KOE/"
     set ok_to_delete_rt_tmp true 
     if { [rt::get_parameter parallelDebug] } { 
        set ok_to_delete_rt_tmp false 

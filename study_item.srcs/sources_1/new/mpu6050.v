@@ -6,7 +6,9 @@ module mpu6050(
     output   reg   [15:0]  i2c_addr  , //I2C器件内地址
     output   reg   [7:0]   i2c_data_w, //I2C要写的数据
     input          [7:0]   i2c_data_r, //I2C读出的数据
-    input                   i2c_done   //I2C一次操作完成
+    input                   i2c_done,   //I2C一次操作完成
+    
+    output  reg    [7:0]    Gyro_z_h
     );
     
 reg [3:0] state;
@@ -103,6 +105,7 @@ always @(posedge clk or negedge rest_n)begin
                  i2c_addr   <= 8'h43;
                  if(i2c_done == 1'b1) begin
                  state      <= 4'd8;
+                 Gyro_z_h   <= i2c_data_r;
                  end
              end 
              
