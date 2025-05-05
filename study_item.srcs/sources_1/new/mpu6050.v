@@ -97,25 +97,42 @@ always @(posedge clk or negedge rest_n)begin
                  end
             end
             
-             4'd7:begin
+             4'd7:begin /*高位*/
                  i2c_exec   <= 1'd1;
                  i2c_rh_wl  <= 1'b1;
                  i2c_addr   <= 8'h43;
-                 i2c_data_w <= 8'h43;
                  if(i2c_done == 1'b1) begin
                  state      <= 4'd8;
                  end
              end 
              
-            4'd8:begin
+            4'd8:begin /*低位 16.4*/
                  i2c_exec   <= 1'd1;
                  i2c_rh_wl  <= 1'b1;
                  i2c_addr   <= 8'h44;
-                 i2c_data_w <= 8'h44;
+                 if(i2c_done == 1'b1) begin
+                 state      <= 4'd9;
+                 end
+             end
+             
+             4'd9:begin /*低位 16.4*/
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b1;
+                 i2c_addr   <= 8'h45;
+                 if(i2c_done == 1'b1) begin
+                 state      <= 4'd10;
+                 end
+             end
+             
+             4'd10:begin /*低位 16.4*/
+                 i2c_exec   <= 1'd1;
+                 i2c_rh_wl  <= 1'b1;
+                 i2c_addr   <= 8'h46;
                  if(i2c_done == 1'b1) begin
                  state      <= 4'd7;
                  end
              end
+             
         endcase 
     end
 end    

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Mon May  5 13:36:24 2025
+| Date                      : Mon May  5 14:21:57 2025
 | Host                      : LAPTOP-PFVE9KOE running 64-bit major release  (build 9200)
 | Command                   : report_io -file assemble_io_placed.rpt
 | Design                    : assemble

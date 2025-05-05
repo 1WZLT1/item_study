@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Mon May  5 13:37:05 2025
+| Date             : Mon May  5 14:22:36 2025
 | Host             : LAPTOP-PFVE9KOE running 64-bit major release  (build 9200)
 | Command          : report_power -file assemble_power_routed.rpt -pb assemble_power_summary_routed.pb -rpx assemble_power_routed.rpx
 | Design           : assemble
@@ -36,8 +36,8 @@ Table of Contents
 | Dynamic (W)              | 0.002        |
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 83.8         |
-| Junction Temperature (C) | 26.2         |
+| Max Ambient (C)          | 83.7         |
+| Junction Temperature (C) | 26.3         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     3813 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1158 |     53200 |            2.18 |
-|   Register               |    <0.001 |     2014 |    106400 |            1.89 |
+| Clocks                   |     0.001 |        3 |       --- |             --- |
+| Slice Logic              |    <0.001 |     3814 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1160 |     53200 |            2.18 |
+|   Register               |    <0.001 |     2012 |    106400 |            1.89 |
 |   LUT as Shift Register  |    <0.001 |       92 |     17400 |            0.53 |
 |   CARRY4                 |    <0.001 |       37 |     13300 |            0.28 |
 |   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   F7/F8 Muxes            |    <0.001 |        4 |     53200 |           <0.01 |
 |   Others                 |     0.000 |      220 |       --- |             --- |
-| Signals                  |    <0.001 |     2849 |       --- |             --- |
+| Signals                  |    <0.001 |     2856 |       --- |             --- |
 | Block RAM                |    <0.001 |        1 |       140 |            0.71 |
 | I/O                      |    <0.001 |        5 |       125 |            4.00 |
 | Static Power             |     0.106 |          |           |                 |
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.009 |       0.002 |      0.007 |
+| Vccint    |       1.000 |     0.010 |       0.002 |      0.007 |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
