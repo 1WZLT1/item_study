@@ -33,6 +33,15 @@ wire [7:0] Gyro_z_h;//Gyro z 高位
 wire [7:0] Gyro_z_l;//Gyro z 高位
 wire [7:0] Gyro_y_h;//Gyro y 高位 
 wire [7:0] Gyro_y_l;//Gyro y 高位  
+wire [7:0] Gyro_x_h;//Gyro x 高位 
+wire [7:0] Gyro_x_l;//Gyro x 高位  
+
+wire [7:0] Acc_x_h;//Acc x 高位 
+wire [7:0] Acc_x_l;//Acc x 高位  
+wire [7:0] Acc_y_h;//Acc y 高位 
+wire [7:0] Acc_y_l;//Acc y 高位  
+wire [7:0] Acc_z_h;//Acc z 高位 
+wire [7:0] Acc_z_l;//Acc z 高位  
     
 led_twinkle u_led_twinkle(
     .clk(clk),
@@ -78,7 +87,19 @@ mpu6050 u_mpu6050(
     .Gyro_z_l  (Gyro_z_l),
     
     .Gyro_y_h  (Gyro_y_h),
-    .Gyro_y_l  (Gyro_y_l)
+    .Gyro_y_l  (Gyro_y_l),
+    
+    .Gyro_x_h   (Gyro_x_h),   
+    .Gyro_x_l   (Gyro_x_l),
+    
+     .Acc_z_h      (Acc_z_h),   
+    .Acc_z_l      (Acc_z_l),
+    
+    .Acc_y_h      (Acc_y_h),
+    .Acc_y_l      (Acc_y_l),
+    
+    .Acc_x_h      (Acc_x_h),   
+    .Acc_x_l      (Acc_x_l)      
 );
 
 uart_send u_uart_send(
@@ -103,7 +124,19 @@ LT_Pack u_LT_Pack(
     .Gyro_z_l     (Gyro_z_l),
     
     .Gyro_y_h     (Gyro_y_h),
-    .Gyro_y_l     (Gyro_y_l)   
+    .Gyro_y_l     (Gyro_y_l),
+    
+    .Gyro_x_h     (Gyro_x_h),   
+    .Gyro_x_l     (Gyro_x_l), 
+    
+    .Acc_z_h      (Acc_z_h),   
+    .Acc_z_l      (Acc_z_l),
+    
+    .Acc_y_h      (Acc_y_h),
+    .Acc_y_l      (Acc_y_l),
+    
+    .Acc_x_h      (Acc_x_h),   
+    .Acc_x_l      (Acc_x_l)   
 );
 
   

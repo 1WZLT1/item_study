@@ -10,7 +10,19 @@ module LT_Pack(
     input [7:0]      Gyro_z_l,
     
     input [7:0]      Gyro_y_h,
-    input [7:0]      Gyro_y_l
+    input [7:0]      Gyro_y_l,
+    
+    input [7:0]      Gyro_x_h,
+    input [7:0]      Gyro_x_l,
+    
+    input    [7:0]    Acc_x_h,
+    input    [7:0]    Acc_x_l,
+
+    input    [7:0]    Acc_y_h,
+    input    [7:0]    Acc_y_l,
+
+    input    [7:0]    Acc_z_h,
+    input    [7:0]    Acc_z_l
 );
 
 reg tx_ready;
@@ -65,7 +77,7 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
             8'd4:begin
                 tx_ready  <= 1'b1;                  //准备启动发送过程
                 send_en   <= 1'b0;
-                send_data <= 8'h04;             //寄存串口接收的数据
+                send_data <= 8'd12;             //寄存串口接收的数据
                 state      = state +  7'd1;
             end
             8'd5:begin
@@ -146,15 +158,159 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
                      state      = state +  7'd1;
                 end  
             end
+            
+            /*****************Gyro_z_H*******************/
+            8'd14:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Gyro_x_h;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd15:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
+            
+             /*****************Gyro_z_l*******************/
+            8'd16:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Gyro_x_l;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd17:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
+            
+            /*****************acc_x_h*******************/
+            8'd18:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Acc_x_h;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd19:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
+            
+            /*****************acc_x_l*******************/
+            8'd20:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Acc_x_l;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd21:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
+            
+            /*****************acc_y_h*******************/
+            8'd22:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Acc_y_h;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd23:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
+            
+            /*****************acc_y_l*******************/
+            8'd24:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Acc_y_l;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd25:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
+            
+            /*****************acc_z_l*******************/
+            8'd26:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Acc_z_h;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd27:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
+            
+            /*****************acc_z_l*******************/
+            8'd28:begin
+                tx_ready  <= 1'b1;                  //准备启动发送过程
+                send_en   <= 1'b0;
+                send_data <= Acc_z_l;             //寄存串口接收的数据
+                state      = state +  7'd1;
+            end
+            8'd29:begin
+                if(tx_ready && (~tx_busy)) begin
+                    tx_ready <= 1'b0;                   //准备过程结束
+                    send_en  <= 1'b1;                   //拉高发送使能信号 
+                end 
+                else if(tx_ready == 1'b0 && tx_busy == 0)begin
+                       //state      = 7'd0;
+                     state      = state +  7'd1;
+                end  
+            end
                            
             /*****************end*******************/
-            8'd14:begin
+            8'd30:begin
                 tx_ready  <= 1'b1;                  //准备启动发送过程
                 send_en   <= 1'b0;
                 send_data <= 8'hFD;             //寄存串口接收的数据
                 state      = state +  7'd1;
             end
-            8'd15:begin
+            8'd31:begin
                 if(tx_ready && (~tx_busy)) begin
                     tx_ready <= 1'b0;                   //准备过程结束
                     send_en  <= 1'b1;                   //拉高发送使能信号 
