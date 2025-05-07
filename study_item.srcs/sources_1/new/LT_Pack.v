@@ -6,6 +6,8 @@ module LT_Pack(
     output reg       send_en,                   //发送使能信号
     output reg [7:0] send_data,                  //待发送数据
     
+    input      [7:0] recv_data,                 //接收的数据
+    
     input [7:0]      Gyro_z_h,
     input [7:0]      Gyro_z_l,
     
@@ -22,7 +24,14 @@ module LT_Pack(
     input    [7:0]    Acc_y_l,
 
     input    [7:0]    Acc_z_h,
-    input    [7:0]    Acc_z_l
+    input    [7:0]    Acc_z_l,
+    
+    input            recv_done,                 //接收一帧数据完成标志
+    
+    output reg       motor,
+    output reg       motor_2,
+    output reg       motor_3,  
+    output reg       motor_4
 );
 
 reg tx_ready;
@@ -321,6 +330,73 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
                 end  
             end
         endcase 
+    end
+end
+
+//判断接收完成信号，并在串口发送模块空闲时给出发送使能信号
+wire recv_done_flag;
+reg recv_done_d0;
+reg recv_done_d1;
+
+assign recv_done_flag = (~recv_done_d1) & recv_done_d0;
+always @(posedge sys_clk or negedge sys_rst_n) begin         
+    if (!sys_rst_n) begin
+        recv_done_d0 <= 1'b0;                                  
+        recv_done_d1 <= 1'b0;
+    end                                                      
+    else begin                                               
+        recv_done_d0 <= recv_done;                               
+        recv_done_d1 <= recv_done_d0;                            
+    end
+end
+
+always @(posedge sys_clk or negedge sys_rst_n) begin         
+    if (!sys_rst_n) begin
+        motor     <= 1'b0;//IN1 左电机前进
+        motor_2   <= 1'b0;//IN2 左电机后退
+        motor_3   <= 1'b0;//IN3 右电机后退
+        motor_4   <= 1'b0;//IN4 右电机后退
+    end                                                      
+    else begin                                               
+        if(recv_done_flag)begin                 //检测串口接收到数据
+            case (recv_data)
+                8'd5:begin
+                    motor   = 1'd0;
+                    motor_2 = 1'd0;
+                    motor_3 = 1'd0;
+                    motor_4 = 1'd0;
+                 end 
+                8'd1:begin/*前进*/
+                    motor   = 1'd1;
+                    motor_4 = 1'd1;
+                    motor_2 = 1'd0;
+                    motor_3 = 1'd0; 
+                 end
+                8'd2:begin/*右转*/
+                    motor_2 = 1'd1;
+                    motor_4 = 1'd1;
+             
+                    motor   = 1'd0;
+                    motor_3 = 1'd0; 
+                 end 
+                 8'd3:begin/*右转*/
+                    motor_2 = 1'd0;
+                    motor_4 = 1'd0;
+             
+                    motor   = 1'd1;
+                    motor_3 = 1'd1; 
+                 end   
+                 8'd4:begin/*前进*/
+                    motor   = 1'd0;
+                    motor_4 = 1'd0;
+                    motor_2 = 1'd1;
+                    motor_3 = 1'd1; 
+                 end   
+            endcase 
+            /*if(recv_data == 8'd1)begin
+                motor     <= 1'b1;
+            end*/ 
+        end
     end
 end
 

@@ -40,6 +40,7 @@ read_verilog -library xil_defaultlib {
   D:/vi/study_item/study_item.srcs/sources_1/new/i2c_dri.v
   D:/vi/study_item/study_item.srcs/sources_1/new/led_twinkle.v
   D:/vi/study_item/study_item.srcs/sources_1/new/mpu6050.v
+  D:/vi/study_item/study_item.srcs/sources_1/new/uart_recv.v
   D:/vi/study_item/study_item.srcs/sources_1/new/uart_send.v
   D:/vi/study_item/study_item.srcs/sources_1/new/assemble.v
 }

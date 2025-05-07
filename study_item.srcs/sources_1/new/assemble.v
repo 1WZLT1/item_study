@@ -8,7 +8,12 @@ module assemble(
     inout                iic_sda,   
     
     input                uart_rxd,           //UART接收端口
-    output               uart_txd            //UART发送端口   
+    output               uart_txd,           //UART发送端口 
+    
+    output               motor,
+    output               motor_2,
+    output               motor_3,
+    output               motor_4  
 );
 
 parameter    SLAVE_ADDR = 7'h68         ; //器件地址(SLAVE_ADDR)
@@ -24,6 +29,9 @@ wire          i2c_done  ;   //I2C操作结束标志
 wire          i2c_ack   ;   //I2C应答标志 0:应答 1:未应答
 wire          i2c_rh_wl ;   //I2C读写控制
 wire  [ 7:0]  i2c_data_r;   //I2C读出的数据
+
+wire       uart_recv_done;              //UART接收完成
+wire [7:0] uart_recv_data;              //UART接收数据
 
 wire       uart_send_en;                //UART发送使能  
 wire [7:0] uart_send_data;              //UART发送数据 
@@ -112,6 +120,18 @@ uart_send u_uart_send(
    .uart_txd      (uart_txd)                 //UART发送端口    
 );
 
+
+//串口接收模块     
+uart_recv u_uart_recv(                 
+    .sys_clk        (clk), 
+    .sys_rst_n      (rest_n),
+    
+    .uart_rxd       (uart_rxd),
+    .uart_done      (uart_recv_done),
+    .uart_data      (uart_recv_data)
+    
+    );
+
 LT_Pack u_LT_Pack(
    .sys_clk       (clk)      ,             //系统时钟
    .sys_rst_n     (rest_n)    ,            //系统复位，低电平有效
@@ -119,6 +139,8 @@ LT_Pack u_LT_Pack(
     .tx_busy      (uart_tx_busy) ,           //发送忙状态标志      
     .send_en      (uart_send_en) ,           //发送使能信号
     .send_data    (uart_send_data),          //待发送数据 
+    
+    .recv_data    (uart_recv_data),   //接收的数据
     
     .Gyro_z_h     (Gyro_z_h),   
     .Gyro_z_l     (Gyro_z_l),
@@ -136,7 +158,14 @@ LT_Pack u_LT_Pack(
     .Acc_y_l      (Acc_y_l),
     
     .Acc_x_h      (Acc_x_h),   
-    .Acc_x_l      (Acc_x_l)   
+    .Acc_x_l      (Acc_x_l),
+    
+    .recv_done      (uart_recv_done),
+    
+    .motor          (motor),
+    .motor_2        (motor_2),
+    .motor_3        (motor_3),
+    .motor_4        (motor_4) 
 );
 
   

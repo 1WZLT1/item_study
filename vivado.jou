@@ -75,3 +75,200 @@ set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.
 set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
 program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_led_twinkle/u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw
+close [ open D:/vi/study_item/study_item.srcs/sources_1/new/uart_recv.v w ]
+add_files D:/vi/study_item/study_item.srcs/sources_1/new/uart_recv.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -name rtl_1
+close_design
+synth_design -rtl -name rtl_1
+close_design
+synth_design -rtl -name rtl_1
+set_property package_pin "" [get_ports [list  motor]]
+place_ports motor V20
+place_ports motor_2 Y19
+place_ports motor_3 Y18
+place_ports motor_4 W20
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor_3]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor_4]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor_2]]
+refresh_design
+close_design
+synth_design -rtl -name rtl_1
+place_ports motor V20
+place_ports motor_2 Y19
+place_ports motor_3 Y18
+place_ports motor_4 W20
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor_2]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor_3]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list motor_4]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_led_twinkle/u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/vi/study_item/study_item.runs/impl_1/assemble.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_led_twinkle/u_ila_0"}]]
